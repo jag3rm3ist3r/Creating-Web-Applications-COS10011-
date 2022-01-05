@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description"	content="Creating Web Applicaitons"/>
+	<meta name="keywords"		content="HTML, CSS, JavaScript"/>
+	<meta name="author"			content="Matthew Hulme"/>
+	<title>COS10011 lab02</title>
+	<style>
+	fieldset, .buttons, #homelogo, h1 {margin: 0.3em;}
+	</style>
+</head>
+<body>
+
+<a href="http://www.swin.edu.au"><img id="homelogo" src="logo.png"/></a>
+<h1>CWA Help Desk Appointment</h1>
+
+<form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+	<fieldset>
+		<legend>Student Details</legend>
+		<p><label for="stuid">Student ID</label>
+			<input type="text" name="stuid" id="stuid" maxlength="20" size="10" required="required" pattern="[0-9]{7,10}"/>
+		</p>
+		<p>
+			<label for="firstname">First Name</label>
+			<input type="text" name="firstname" id="firstname" maxlength="20" size="10" required="required" pattern="[A-Za-z]+"/>
+			<label for="familyname" style="padding-left:2em;">Family Name</label>
+			<input type="text" name="familyname" id="familyname" maxlength="20" size="10" required="required" pattern="[A-Za-z]+"/>
+		</p>
+	</fieldset>
+	<fieldset>
+		<legend>Your Unit</legend>
+		<p><label for="COS10011">COS10011</label>
+			<input type="radio" id="COS10011" name="subject" value="COS10011" required="required"/>
+		</p>
+		<p><label for="TNE10005">TNE10005</label>
+			<input type="radio" id="TNE10005" name="subject" value="TNE10005"/>
+		</p>
+		<p><label for="Tutor">Tutor</label>
+			<select name="tutor" id="tutor" required="required">
+				<option value="">Please Select</option>
+				<option value="xuehong_tao">Dr. Xuehong (Grace) Tao</option>
+				<option value="guangming_cui">Guangming Cui</option>
+				<option value="xiaoyu_xia">Xiaoyu Xia (Shaw)</option>
+				<option value="bo_li">Bo Li</option>
+			</select>
+		</p>
+	</fieldset>
+	<fieldset>
+		<legend>Issue</legend>
+		<p>
+			<label for="html">HTML</label>
+			<input type="checkbox" id="html" name="htmlcb" value="html" checked="checked"/>
+			<label for="css">CSS</label>
+			<input type="checkbox" id="css" name="csscb" value="css"/>
+			<label for="js">JavaScript</label>
+			<input type="checkbox" id="js" name="jscb" value="js"/>
+		</p>
+		<p>
+			<label for="issuedesc" style="display: block;">Description of Issue</label>
+			<textarea id="issuedesc" name="issuedesc" rows="4" cols="40" required="required" placeholder="Describe your problem..."></textarea>
+		</p>
+	</fieldset>
+	<fieldset>
+		<legend>Preferred Date / Time</legend>
+		<p>
+			<label for="date">Time</label>
+			<input type="date"/>
+		</p>
+		<p>
+			<label for="time">Time</label>
+			<input type="time"/>
+		</p>
+	</fieldset>
+
+	<input class="buttons" type= "submit" value="Register"/>
+	<input class="buttons" type= "reset" value="Reset Form"/>
+</form>
+</body>
+</html>
